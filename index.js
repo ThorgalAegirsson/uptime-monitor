@@ -11,6 +11,8 @@ const fs = require('fs');
 const { StringDecoder } = require('string_decoder');
 const config = require('./config');
 
+
+
 const handlers = {};
 
 handlers.ping = (data, callback) => {
@@ -31,7 +33,6 @@ const router = {
 };
 
 const unifiedServer = (req, res) => {
-    // const parsedURL = url.parse(req.url, true);
     const parsedURL = new URL(req.url, 'http://localhost');
     const path = parsedURL.pathname;
     const trimmedPath = path.replace(/^\/+|\/+$/g, '');
