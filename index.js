@@ -13,6 +13,12 @@ const config = require('./config');
 const handlers = require('./lib/handlers');
 const helpers = require('./lib/helpers');
 
+// @TODO get rid of this
+
+helpers.sendTwilioSMS('9173422088', 'Hello from my server', err => {
+    console.log('There was an error ', err);
+});
+
 
 const router = {
     ping: handlers.ping,
