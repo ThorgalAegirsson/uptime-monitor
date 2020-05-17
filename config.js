@@ -20,9 +20,9 @@ environments.staging = {
     hashSecret: 'thisisasecret',
     maxChecks: 5,
     twilio: {
-        accountSid: 'ACb32d411ad7fe886aac54c665d25e5c5d',
-        authToken: '9455e3eb3109edc12e3d8c92768f7a67',
-        fromPhone: '+15005550006'
+        accountSid: '',
+        authToken: '',
+        fromPhone: '+12073863941'
     }
 };
 
@@ -34,9 +34,9 @@ environments.production = {
     hashSecret: 'thisisasecret',
     maxChecks: 5,
     twilio: {
-        accountSid: 'ACb32d411ad7fe886aac54c665d25e5c5d',
-        authToken: '9455e3eb3109edc12e3d8c92768f7a67',
-        fromPhone: '+15005550006'
+        accountSid: '',
+        authToken: '',
+        fromPhone: '+12073863941'
     }
 };
 
