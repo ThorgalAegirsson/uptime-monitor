@@ -1,4 +1,11 @@
+# Project specific
+.data/
+
+# IDE
+.vscode/
+
 # Logs
+.logs/
 logs
 *.log
 npm-debug.log*
