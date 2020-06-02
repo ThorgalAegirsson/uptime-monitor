@@ -23,6 +23,12 @@ environments.staging = {
         accountSid: '',
         authToken: '',
         fromPhone: '+12073863941'
+    },
+    templateGlobals: {
+        appName: 'Uptime Monitor',
+        companyName: 'Room 33 Ltd',
+        yearCreated: '2020',
+        baseUrl: 'http://localhost:3000/'
     }
 };
 
@@ -37,6 +43,12 @@ environments.production = {
         accountSid: '',
         authToken: '',
         fromPhone: '+12073863941'
+    },
+    templateGlobals: {
+        appName: 'Uptime Monitor',
+        companyName: 'Room 33 Ltd',
+        yearCreated: '2020',
+        baseUrl: 'http://localhost:5000/'
     }
 };
 
