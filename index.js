@@ -7,12 +7,7 @@
 // Deps
 const server = require('./lib/server');
 const workers = require('./lib/workers');
-const helpers = require('./lib/helpers');
-
-helpers.sendTwilioSMS('9172571666', 'testmessage', err => {
-    console.error(err)
-})
-
+const cli = require('./lib/cli');
 
 // Declare the app
 const app = {};
@@ -21,6 +16,8 @@ const app = {};
 app.init = () => {
     server.init();
     workers.init();
+    // Start the CLI but make it start last!
+    setTimeout(() => cli.init(), 50);
 };
 
 app.init();
