@@ -13,19 +13,17 @@ const cli = require('./lib/cli');
 // Declare the app
 const app = {};
 
+// Declare a global (that strict mode should catch)
+foo = 'bar';
+
 // Init function
-app.init = callback => {
+app.init = () => {
     server.init();
     workers.init();
     // Start the CLI but make it start last!
-    setTimeout(() => {
-        cli.init();
-        callback();
-    }, 50);
-
+    setTimeout(() => cli.init(), 50);
 };
 
-// Self invoking only if required directly - in the test suite it is not invoked, but from CLI (node index) it is
-if (require.main===module) app.init(()=>{});
+app.init();
 
 module.exports = app;

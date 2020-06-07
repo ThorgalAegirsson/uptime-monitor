@@ -32,6 +32,26 @@ environments.staging = {
     }
 };
 
+// testing environment
+environments.testing = {
+    httpPort: 4000,
+    httpsPort: 4001,
+    envName: 'testing',
+    hashSecret: 'thisisasecret',
+    maxChecks: 5,
+    twilio: {
+        accountSid: '',
+        authToken: '',
+        fromPhone: '+12073863941'
+    },
+    templateGlobals: {
+        appName: 'Uptime Monitor',
+        companyName: 'Room 33 Ltd',
+        yearCreated: '2020',
+        baseUrl: 'http://localhost:3000/'
+    }
+};
+
 // Production environment
 environments.production = {
     httpPort: 5000,
